@@ -1,0 +1,220 @@
+body {
+    background-color: rgb(32, 35, 36);
+}
+
+.action-btn {
+    margin-left: 2em;
+}
+
+.bg-grey {
+  background-color: grey;
+  color: white;
+  margin-bottom: 1em;
+}
+
+.light {
+  background-color: rgb(183, 183, 184);
+}
+
+#hunger-bar {
+  width: 50%;
+  height: 30px;
+  text-align: end;
+  background-color: rgb(31, 5, 124);
+}
+/* 
+#feed {
+  --color: rgb(31, 5, 124);
+  font-family: inherit;
+  display: inline-block;
+  width: 8em;
+  height: 2.6em;
+  line-height: 2.5em;
+  margin: 20px;
+  position: relative;
+  overflow: hidden;
+  border: 2px solid var(--color);
+  transition: color 0.5s;
+  z-index: 1;
+  font-size: 17px;
+  border-radius: 6px;
+  font-weight: 500;
+  color: var(--color);
+}
+
+#feed:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  background: var(--color);
+  height: 150px;
+  width: 200px;
+  border-radius: 50%;
+}
+
+#feed:hover {
+  color: #fff;
+}
+
+#feed:before {
+  top: 100%;
+  left: 100%;
+  transition: all 0.7s;
+}
+
+#feed:hover:before {
+  top: -30px;
+  left: -30px;
+}
+
+#feed:active:before {
+  background: #3a0ca3;
+  transition: background 0s;
+} */
+
+#health-bar {
+  width: 70%;
+  height: 30px;
+  background-color: rgb(190, 0, 0);
+  text-align: end;
+}
+
+/* #clean {
+  --color: rgb(190, 0, 0);
+  font-family: inherit;
+  display: inline-block;
+  width: 8em;
+  height: 2.6em;
+  line-height: 2.5em;
+  margin: 20px;
+  position: relative;
+  overflow: hidden;
+  border: 2px solid var(--color);
+  transition: color 0.5s;
+  z-index: 1;
+  font-size: 17px;
+  border-radius: 6px;
+  font-weight: 500;
+  color: var(--color);
+}
+
+#clean:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  background: var(--color);
+  height: 150px;
+  width: 200px;
+  border-radius: 50%;
+}
+
+#clean:hover {
+  color: #fff;
+  border: 1px solid rgb(5, 182, 143);
+}
+
+#clean:before {
+  top: 100%;
+  left: 100%;
+  transition: all 0.7s;
+}
+
+#clean:hover:before {
+  top: -30px;
+  left: -30px;
+}
+
+#clean:active:before {
+  background: rgb(196, 58, 58);
+  transition: background 0s;
+} */
+
+#happy-bar {
+  width: 60%;
+  height: 30px;
+  text-align: end;
+  background-color: rgb(3, 160, 3);
+}
+
+/* #play {
+  --color: rgb(3, 160, 3);
+  font-family: inherit;
+  display: inline-block;
+  width: 8em;
+  height: 2.6em;
+  line-height: 2.5em;
+  margin: 20px;
+  position: relative;
+  overflow: hidden;
+  border: 2px solid var(--color);
+  transition: color 0.5s;
+  z-index: 1;
+  font-size: 17px;
+  border-radius: 6px;
+  font-weight: 500;
+  color: var(--color);
+}
+
+#play:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  background: var(--color);
+  height: 150px;
+  width: 200px;
+  border-radius: 50%;
+}
+
+#play:hover {
+  color: #fff;
+}
+
+#play:before {
+  top: 100%;
+  left: 100%;
+  transition: all 0.7s;
+}
+
+#play:hover:before {
+  top: -30px;
+  left: -30px;
+}
+
+#play:active:before {
+  background: rgb(5, 105, 5);
+  transition: background 0s;
+} */
+
+#pet-img-div {
+    /* width: 20%; */
+    margin: 0 auto;
+}
+
+#pet-img {
+    width: 50%;
+}
+
+.btn-primary {
+    background-color: rgb(31, 5, 124);
+}
+
+.btn-danger {
+    background-color: rgb(190, 0, 0);
+}
+
+.btn-success {
+    background-color: rgb(3, 160, 3);
+}
+
+@media only screen and (max-width: 700px) {
+    .rev {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .action-btn {
+        width: 4.7em;
+        font-size: small;
+    }
+    
+}
