@@ -37,14 +37,42 @@
               <div id="happy-bar">60%</div>
             </div>
           </div>
-          <div class="dropdown text-center  mt-4 mb-4">
-            <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <div class="dropdown text-center mt-4 mb-4">
+            <button
+              class="btn btn-secondary dropdown-toggle"
+              type="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
               Settings
             </button>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#" >Rename Pet</a></li>
-              <li><a class="dropdown-item" href="#" >Speed</a></li>
-              <li><a class="dropdown-item" href="#" >Reset Game</a></li>
+              <li>
+                <button
+                  type="button"
+                  class="dropdown-item"
+                  data-bs-toggle="modal"
+                  data-bs-target="#rename-pet"
+                >
+                  Rename Pet
+                </button>
+              </li>
+              <li> <button
+                type="button"
+                class="dropdown-item"
+                data-bs-toggle="modal"
+                data-bs-target="#game-speed"
+              >
+                Speed
+              </button></li>
+              <li> <button
+                type="button"
+                class="dropdown-item"
+                data-bs-toggle="modal"
+                data-bs-target="#reset-game"
+              >
+                Reset Game
+              </button></li>
             </ul>
           </div>
         </div>
@@ -54,13 +82,25 @@
               <img src="images/pet_normal.gif" id="pet-img" class="rounded" />
             </div>
             <div class="text-center mt-4" id="pet-buttons ">
-              <button id="clean" onclick="clean()" class="action-btn btn btn-lg btn-danger">
+              <button
+                id="clean"
+                onclick="clean()"
+                class="action-btn btn btn-lg btn-danger"
+              >
                 Clean
               </button>
-              <button id="feed" onclick="feed()" class="action-btn btn btn-lg btn-primary">
+              <button
+                id="feed"
+                onclick="feed()"
+                class="action-btn btn btn-lg btn-primary"
+              >
                 Feed
               </button>
-              <button id="play" onclick="play()" class="action-btn btn btn-lg btn-success">
+              <button
+                id="play"
+                onclick="play()"
+                class="action-btn btn btn-lg btn-success"
+              >
                 Play
               </button>
             </div>
@@ -68,6 +108,78 @@
         </div>
       </div>
     </div>
+
+    <!-- Modals -->
+
+    <!-- Rename Pet -->
+    <div id="rename-pet" class="modal fade" role="dialog">
+      <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button class="close" type="button" data-bs-dismiss="modal">
+              &times;
+            </button>
+            <h4 class="modal-title">Rename Pet</h4>
+          </div>
+          <div class="modal-body">
+            <form action="">
+              <div class="mb-3">
+                <label for="petName" class="col-form-label"
+                  >Enter a new name:</label
+                >
+                <input id="new-pet-name" type="text" class="form-control" />
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              data-bs-dismiss="modal"
+              onclick="renamePet()"
+              class="btn btn-secondary"
+            >
+              Save
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Game Speed -->
+    <div id="game-speed" class="modal fade" role="dialog">
+      <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button class="close" type="button" data-bs-dismiss="modal">
+              &times;
+            </button>
+            <h4 class="modal-title">Game Speed</h4>
+          </div>
+          <div class="modal-body">
+            <form action="">
+              <div class="mb-3 text-center">
+                <!-- <label for="petName" class="col-form-label"></label> -->
+                <input class="btn btn-outline-secondary m-2" id="slow" type="button" value="Slow">
+                <input class="btn btn-outline-secondary m-2" id="normal" type="button" value="Normal">
+                <input class="btn btn-outline-secondary m-2" id="fast" type="button" value="Fast">
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              data-bs-dismiss="modal"
+              onclick=""
+              class="btn btn-secondary"
+            >
+              Save
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
     <script type="text/javascript" src="main.js"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>

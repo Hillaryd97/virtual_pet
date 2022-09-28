@@ -1,6 +1,8 @@
 var hungerBar = document.getElementById("hunger-bar");
 var happyBar = document.getElementById("happy-bar");
 var healthBar = document.getElementById("health-bar");
+const newPetName = document.getElementById("new-pet-name");
+const oldPetName = document.getElementById("pet-name");
 
 function petDay() {
   let i = 0;
@@ -35,14 +37,12 @@ function feed() {
 const feedButton = document.getElementById("feed");
 feedButton.addEventListener('mouseout', hungerMove);
 
-
+const hungerInt = 200000;
 function hungerMove() {
   let i = 0;
   if (i == 0) {
     i = 1;
-    // var hungerBar = document.getElementById("hunger-bar");
-    // let width = 50;
-    let id = setInterval(frame, 200000);
+    let id = setInterval(frame, hungerInt);
     function frame() {
       if (hungerWidth >= 100) {
         clearInterval(id);
@@ -76,13 +76,15 @@ function clean() {
 const cleanButton = document.getElementById("clean");
 cleanButton.addEventListener('mouseout', healthMove);
 
+
+const healthInt = 300000;
 function healthMove() {
   let i = 0;
   if (i == 0) {
     i = 1;
     // var healthBar = document.getElementById("health-bar");
     // let width = 70;healthW    
-    let id = setInterval(frame, 300000);
+    let id = setInterval(frame, healthInt);
     function frame() {
       if (healthWidth <= 0) {
         clearInterval(id);
@@ -115,12 +117,12 @@ function play() {
 const playButton = document.getElementById("play");
 playButton.addEventListener('mouseout', happyMove);
 
+happyInt = 120000;
 function happyMove() {
   let i = 0;
   if (i == 0) {
     i = 1;
-    //   var happyBar = document.getElementById("happy-bar");
-    let id = setInterval(frame, 120000);
+    let id = setInterval(frame, happyInt);
     function frame() {
       if (happyWidth <= 0) {
         clearInterval(id);
@@ -133,4 +135,8 @@ function happyMove() {
       //   console.log(happyWidth);
     }
   }
+}
+
+function renamePet() {
+  oldPetName.innerHTML = newPetName.value;
 }
