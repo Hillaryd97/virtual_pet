@@ -35,7 +35,7 @@ function feed() {
 }
 
 const feedButton = document.getElementById("feed");
-feedButton.addEventListener('mouseout', hungerMove);
+feedButton.addEventListener("mouseout", hungerMove);
 
 const hungerInt = 200000;
 function hungerMove() {
@@ -47,6 +47,7 @@ function hungerMove() {
       if (hungerWidth >= 100) {
         clearInterval(id);
         i = 0;
+        alert("Game Over! You left for too long and your pet died of starvation!")
       } else {
         hungerWidth += 2;
         hungerBar.style.width = hungerWidth + "%";
@@ -55,7 +56,6 @@ function hungerMove() {
     }
   }
 }
-
 
 let healthWidth = 80;
 
@@ -74,8 +74,7 @@ function clean() {
 }
 
 const cleanButton = document.getElementById("clean");
-cleanButton.addEventListener('mouseout', healthMove);
-
+cleanButton.addEventListener("mouseout", healthMove);
 
 const healthInt = 300000;
 function healthMove() {
@@ -83,12 +82,13 @@ function healthMove() {
   if (i == 0) {
     i = 1;
     // var healthBar = document.getElementById("health-bar");
-    // let width = 70;healthW    
+    // let width = 70;healthW
     let id = setInterval(frame, healthInt);
     function frame() {
       if (healthWidth <= 0) {
         clearInterval(id);
         i = 0;
+        alert("Game Over! You left for too long and your pet contacted a deadly disease!");
       } else {
         healthWidth--;
         healthBar.style.width = healthWidth + "%";
@@ -115,7 +115,7 @@ function play() {
 }
 
 const playButton = document.getElementById("play");
-playButton.addEventListener('mouseout', happyMove);
+playButton.addEventListener("mouseout", happyMove);
 
 happyInt = 120000;
 function happyMove() {
@@ -127,6 +127,7 @@ function happyMove() {
       if (happyWidth <= 0) {
         clearInterval(id);
         i = 0;
+        alert("Game Over! Your pet was lonely without you and died of heartbreak!");
       } else {
         happyWidth--;
         happyBar.style.width = happyWidth + "%";
@@ -137,6 +138,19 @@ function happyMove() {
   }
 }
 
+errorMessage = document.getElementById("error");
 function renamePet() {
-  oldPetName.innerHTML = newPetName.value;
+  if (newPetName.value === "") {
+    errorMessage.style.color = "red";
+    errorMessage.innerHTML = "Enter a name!";
+
+    setTimeout(() => errorMessage.remove(), 5000);
+  } else {
+    oldPetName.innerHTML = newPetName.value;
+  }
 }
+
+function resetGame() {
+  // oldPetName.innerHTML = "Shiro";
+}
+

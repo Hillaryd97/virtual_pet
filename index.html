@@ -129,17 +129,25 @@
                 >
                 <input id="new-pet-name" type="text" class="form-control" />
               </div>
+              <b><p id="error"></p></b>
             </form>
           </div>
           <div class="modal-footer">
             <button
               type="button"
-              data-bs-dismiss="modal"
               onclick="renamePet()"
-              class="btn btn-secondary"
+              class="btn btn-info"
             >
-              Save
+              Rename
             </button>
+            <button
+            type="button"
+            data-bs-dismiss="modal"
+            onclick="renamePet()"
+            class="btn btn-secondary"
+          >
+            Close
+          </button>
           </div>
         </div>
       </div>
@@ -173,6 +181,34 @@
               class="btn btn-secondary"
             >
               Save
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Reset Game -->
+    <div id="reset-game" class="modal fade" role="dialog">
+      <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button class="close" type="button" data-bs-dismiss="modal">
+              &times;
+            </button>
+            <h4 class="modal-title">Reset Game</h4>
+          </div>
+          <div class="modal-body text-center">
+            <p>If you press this button, you are going to lose all your progress forever.</p>
+            <button class="btn btn-outline-danger" onclick="resetGame()">RESET</button>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              data-bs-dismiss="modal"
+              onclick="renamePet()"
+              class="btn btn-secondary"
+            >
+              Close
             </button>
           </div>
         </div>
